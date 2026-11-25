@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-display: 'Syne', ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif;
+    --color-nl-teal: #0b6e6a;
+    --color-nl-teal-dark: #085451;
+    --color-nl-mist: #eef3f5;
+    --color-nl-ink: #142026;
+    --color-nl-brass: #b8975a;
+    --color-nl-slate: #5c6b73;
+    --color-nl-soft: #d6e4e2;
+}
+
+:root {
+    --nl-teal: #0b6e6a;
+    --nl-teal-dark: #085451;
+    --nl-mist: #eef3f5;
+    --nl-ink: #142026;
+    --nl-brass: #b8975a;
+    --nl-slate: #5c6b73;
+    --nl-soft: #d6e4e2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--nl-ink);
+    background: var(--nl-mist);
+}
+
+.font-display {
+    font-family: var(--font-display);
+}
+
+.nl-gradient {
+    background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(11, 110, 106, 0.18), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(184, 151, 90, 0.16), transparent 50%),
+        linear-gradient(180deg, #f7fafb 0%, #eef3f5 45%, #e5eceb 100%);
+}
+
+.nl-grid-bg {
+    background-image:
+        linear-gradient(rgba(20, 32, 38, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20, 32, 38, 0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+.nl-hero-media {
+    animation: nlRise 1.1s ease-out both;
+}
+
+.nl-fade-up {
+    animation: nlRise 0.9s ease-out both;
+}
+
+.nl-fade-up-delay {
+    animation: nlRise 1.1s ease-out 0.15s both;
+}
+
+@keyframes nlRise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nl-chat {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 5.5rem;
+    z-index: 50;
+    width: min(22rem, calc(100vw - 2rem));
+}
+
+.nl-whatsapp {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 50;
+}

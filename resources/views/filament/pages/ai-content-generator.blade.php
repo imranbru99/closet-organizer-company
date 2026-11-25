@@ -1,0 +1,13 @@
+<x-filament-panels::page>
+    <form wire:submit="generate" class="space-y-6">
+        {{ $this->form }}
+        <x-filament::button type="submit">Generate</x-filament::button>
+    </form>
+
+    @if($result)
+        <div class="mt-6 rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-950/5 dark:bg-gray-900 dark:ring-white/10">
+            <h3 class="mb-2 text-sm font-semibold text-gray-950 dark:text-white">Generated output</h3>
+            <pre class="whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200">{{ $result }}</pre>
+        </div>
+    @endif
+</x-filament-panels::page>
